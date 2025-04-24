@@ -1,5 +1,6 @@
 provider "aws" {
   region = "us-east-1"
+  profile = "new-account"
 }
 
 resource "random_pet" "this" {

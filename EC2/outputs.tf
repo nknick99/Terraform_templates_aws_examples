@@ -48,3 +48,18 @@ output "ec2_availability_zone" {
   description = "The availability zone of the created spot instance"
   value       = module.ec2.availability_zone
 }
+
+output "vpc" {
+  description = "The selected VPC"
+  value = data.aws_vpc.selected.id
+}
+
+output "subnet" {
+  description = "The Subnet id created"
+  value = data.aws_subnet.selected.id
+}
+
+output "ami_id" {
+  description = "The selected AMI ID"
+  value = data.aws_ami.red_hat.id
+}

@@ -1,5 +1,6 @@
 provider "aws" {
   region = local.region
+  profile = "new-account"
 }
 
 data "aws_caller_identity" "current" {}
@@ -171,7 +172,7 @@ module "disabled_sns" {
 }
 
 ################################################################################
-# Supporting Resources
+# Supporting Resources ISSUE
 ################################################################################
 
 module "kms" {
@@ -232,7 +233,7 @@ module "sqs" {
 
   tags = local.tags
 }
-
+#####Permission ISSUE
 resource "aws_iam_role" "this" {
   name = local.name
 

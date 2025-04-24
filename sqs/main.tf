@@ -1,5 +1,6 @@
 provider "aws" {
   region = local.region
+  profile = "new-account"
 }
 
 data "aws_caller_identity" "current" {}
