@@ -1,6 +1,5 @@
 locals {
   bucket_name = "s3-bucket-${random_pet.this.id}"
-  #region      = "us-east-1"
 }
 
 resource "random_pet" "this" {
